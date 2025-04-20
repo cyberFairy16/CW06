@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import FilteredList from './FilteredList';  // Correct path for FilteredList.js
+import List from './List';  // Correct path for List.js
+
+const produce = [
+  { name: "Apple", type: "fruit" },
+  { name: "Banana", type: "fruit" },
+  { name: "Carrot", type: "vegetable" },
+  { name: "Spinach", type: "vegetable" },
+  { name: "Mango", type: "fruit" }
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FilteredList items={produce} />
+      <List items={produce} />
     </div>
   );
 }
